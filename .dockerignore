@@ -6,5 +6,6 @@ src
 input
 exp
 output
+check
 .gitignore
 README.md

@@ -1,8 +1,6 @@
 *.DS_Store
-data/
 input/
-output/
-Chekc/
+check/
 *.csv
 *.xlsx
 *.gz
@@ -17,6 +15,6 @@ Chekc/
 *.tsv
 *.tfevents
 *.log
-
+*.zip
 #jupyter notebook
 .ipynb_checkpoints
