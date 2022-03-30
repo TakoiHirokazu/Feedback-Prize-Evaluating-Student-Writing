@@ -34,7 +34,7 @@ When you have finished running the training code, run the following code as a pr
 
 # Postprocess(Teammate part)
 Please change the PATH and run the following two notebooks.
-https://colab.research.google.com/drive/1J2NTaRSKi-X5SBXxvQtVJxokZIW0oq4L
+https://colab.research.google.com/drive/1J2NTaRSKi-X5SBXxvQtVJxokZIW0oq4L?usp=sharing
 https://www.kaggle.com/code/columbia2131/tuning-exp038-right-edge-removing/notebook
 
 # Inference & Submit
