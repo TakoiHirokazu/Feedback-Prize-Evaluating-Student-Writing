@@ -1,11 +1,9 @@
 # kaggleのpython環境をベースにする
-FROM gcr.io/kaggle-images/python:v105
-#ARG JUPYTER_PASSWORD="r8RzeQS7"
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+FROM gcr.io/kaggle-gpu-images/python:v104
 
 # ライブラリの追加インストール
 RUN pip install -U pip && \
-    pip install fastprogress japanize-matplotlib
+    pip install efficientnet_pytorch==0.7.1 torchtoolbox==0.1.5 pretrainedmodels==0.7.4 grad-cam==1.3.5 transformers==4.12.5
 
 RUN conda install -y \
   nodejs
@@ -13,8 +11,3 @@ RUN conda install -y \
 #tqdm
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension \
  && jupyter labextension install @jupyter-widgets/jupyterlab-manager
-
-#  # jupyter の config ファイルの作成
-# RUN echo "c.NotebookApp.open_browser = False\n\
-# c.NotebookApp.ip = '*'\n\
-# c.NotebookApp.token = '${JUPYTER_PASSWORD}'" | tee -a ${HOME}/.jupyter/jupyter_notebook_config.py
